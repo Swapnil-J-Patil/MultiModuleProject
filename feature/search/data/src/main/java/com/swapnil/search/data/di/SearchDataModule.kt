@@ -1,6 +1,8 @@
 package com.swapnil.search.data.di
 
 import com.swapnil.search.data.remote.SearchApiService
+import com.swapnil.search.data.repository.SearchRepoImpl
+import com.swapnil.search.domain.repository.SearchRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,4 +31,8 @@ object SearchDataModule {
         return retrofit.create(SearchApiService::class.java)
     }
 
+    @Provides
+    fun provideSearchRepository(searchApiService: SearchApiService): SearchRepository {
+        return SearchRepoImpl(searchApiService)
+    }
 }
