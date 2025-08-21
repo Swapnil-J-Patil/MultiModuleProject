@@ -5,16 +5,20 @@ coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+kotlinxCoroutinesCore = "1.8.1"
+kotlinxCoroutinesAndroid = "1.8.1"
 lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
 composeBom = "2024.09.00"
 appcompat = "1.6.1"
+lifecycleViewmodelKtx = "2.9.2"
 material = "1.12.0"
 engageCore = "1.5.0"
 androidx-annotation = "1.9.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-viewmodel-ktx-v292 = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -40,6 +44,8 @@ hilt-compose-navigation = { module = "androidx.hilt:hilt-navigation-compose", ve
 #annotation = { module = "androidx.annotation:annotation", version = "1.7.1" }
 junit-ktx = { module = "androidx.test.ext:junit-ktx", version = "1.1.5" }
 junit-ext = { module = "androidx.test.ext:junit", version = "1.1.5" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 mockito = { module = "org.mockito:mockito-core", version = "5.5.0" }
 android-test-mockito = { module = "org.mockito:mockito-android", version = "5.5.0" }
 android-test-mockito-inline = { module = "org.mockito:mockito-inline", version = "4.0.0" }
