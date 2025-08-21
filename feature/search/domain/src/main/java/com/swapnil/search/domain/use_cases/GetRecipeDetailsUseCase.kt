@@ -3,8 +3,10 @@ package com.swapnil.search.domain.use_cases
 import com.swapnil.common.utils.NetworkResult
 import com.swapnil.search.domain.model.RecipeDetails
 import com.swapnil.search.domain.repository.SearchRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 class GetRecipeDetailsUseCase @Inject constructor(private val searchRepository: SearchRepository){
@@ -20,5 +22,5 @@ class GetRecipeDetailsUseCase @Inject constructor(private val searchRepository: 
         }
     }.catch {
         emit(NetworkResult.Error(it.message.toString()))
-    }
+    }.flowOn(Dispatchers.IO)
 }

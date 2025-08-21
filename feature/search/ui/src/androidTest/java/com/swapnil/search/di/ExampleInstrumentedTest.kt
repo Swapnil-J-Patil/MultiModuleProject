@@ -1,4 +1,4 @@
-package com.swapnil.search.ui
+package com.swapnil.search.di
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.swapnil.search.ui
+package com.swapnil.search.di
 
 import org.junit.Test
 

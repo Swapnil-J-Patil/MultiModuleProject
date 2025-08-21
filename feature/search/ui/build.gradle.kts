@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.dagger)
+    id("kotlin-kapt")
 }
 
 android {
-    namespace = "com.swapnil.search.ui"
+    namespace = "com.swapnil.search.di"
     compileSdk = 35
 
     defaultConfig {
@@ -34,10 +36,18 @@ android {
 
 dependencies {
 
+    implementation(project(":feature:search:domain"))
+    implementation(project(":common"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Retrofit and Dagger-hilt
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson.convertor)
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.kapt)
 }
