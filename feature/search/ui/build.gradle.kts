@@ -49,7 +49,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
-
+    implementation(libs.navigation.compose)
     //Retrofit and Dagger-hilt
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson.convertor)

@@ -53,6 +53,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     //implementation(libs.androidx.annotation)
     implementation("androidx.annotation:annotation:1.9.1")
-
     implementation(libs.navigation.compose)
 }
