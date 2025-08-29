@@ -44,6 +44,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.material3)
+    implementation(libs.coil.compose)
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx.v292)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -55,4 +57,5 @@ dependencies {
     implementation(libs.retrofit.gson.convertor)
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.kapt)
+    implementation(libs.hilt.compose.navigation)
 }

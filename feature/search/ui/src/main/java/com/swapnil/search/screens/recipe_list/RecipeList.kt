@@ -9,10 +9,18 @@ object RecipeList {
          val error: UiText = UiText.Idle,
          val data: List<Recipe>? = null
      )
-    sealed interface Navigation{
-        data class GoToRecipeDetails(val id: String): Navigation
+    sealed interface Navigation {
+
+        data class GoToRecipeDetails(val id: String) : Navigation
+
+        data object GoToFavoriteScreen:Navigation
+
     }
-    sealed interface Event{
-        data class SearchRecipe(val q: String): Event
+    sealed interface Event {
+        data class SearchRecipe(val q: String) : Event
+
+        data class GoToRecipeDetails(val id: String) : Event
+
+        data object FavoriteScreen:Event
     }
 }
